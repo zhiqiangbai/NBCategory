@@ -57,11 +57,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'NBCategory/NBCategories/UIImage/*.h'
     end
 
-    s.subspec 'UIImageView' do |ss|
-        ss.source_files = 'NBCategory/NBCategories/UIImageView/*.{h,m}'
-        ss.public_header_files = 'NBCategory/NBCategories/UIImageView/*.h'
-    end
-
     s.subspec 'UIKit' do |ss|
         ss.source_files = 'NBCategory/NBCategories/UIKit/*.{h,m}'
         ss.public_header_files = 'NBCategory/NBCategories/UIKit/*.h'

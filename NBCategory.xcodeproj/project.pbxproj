@@ -179,7 +179,6 @@
 				44E6681E1DB3171C00E9222C /* NSString */,
 				44E668231DB3171C00E9222C /* UIColor */,
 				44E668261DB3171C00E9222C /* UIImage */,
-				44E6682E1DB3171C00E9222C /* UIImageView */,
 				44E6682F1DB3171C00E9222C /* UIKit */,
 			);
 			path = NBCategories;
@@ -226,13 +225,6 @@
 				44E6682D1DB3171C00E9222C /* UIImage+NBReMake.m */,
 			);
 			path = UIImage;
-			sourceTree = "<group>";
-		};
-		44E6682E1DB3171C00E9222C /* UIImageView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIImageView;
 			sourceTree = "<group>";
 		};
 		44E6682F1DB3171C00E9222C /* UIKit */ = {
@@ -621,6 +613,7 @@
 				44E668121DB316DE00E9222C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44E668131DB316DE00E9222C /* Build configuration list for PBXNativeTarget "NBCategoryTests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +622,7 @@
 				44E668151DB316DE00E9222C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44E668161DB316DE00E9222C /* Build configuration list for PBXNativeTarget "NBCategoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -637,6 +631,7 @@
 				44E668181DB316DE00E9222C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
