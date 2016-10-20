@@ -12,22 +12,41 @@
 @interface UIColor (NBExtend)
 
 /**
- *  十六进制颜色
+ *  自定义透明度和颜色值生成颜色
+ *
+ *  @param hexValue   十六进制颜色值 0xFFFFFF
+ *  @param alphaValue 透明度 0.0~1.0
+ *
+ *  @return 生成的颜色
  */
-+ (UIColor *)colorWithHexColorString:(NSString *)hexColorString;
-
++ (UIColor*)colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alphaValue;
+    
 /**
- *  十六进制颜色:含alpha
+ *  自定义颜色值生成颜色(为不透明)
+ *
+ *  @param hexValue   十六进制颜色值 0xFFFFFF
+ *
+ *  @return 生成的颜色
  */
-+ (UIColor *)colorWithHexColorString:(NSString *)hexColorString alpha:(float)alpha;
++ (UIColor*)colorWithHex:(NSInteger)hexValue;
+    
+/**
+ *  获取指定颜色的十六进制值
+ *
+ *  @param color 指定颜色
+ *
+ *  @return 十六进制字符串
+ */
++ (NSString *)hexFromUIColor:(UIColor*)color;
+
 
 @end
 
 /** 普通定义 */
 #define rgb(r,g,b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f]
 #define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
-#define hexColor(colorV) [UIColor colorWithHexColorString:@#colorV]
-#define hexColorAlpha(colorV,a) [UIColor colorWithHexColorString:@#colorV alpha:a]
+#define hexColor(colorV) [UIColor colorWithHex:colorV]
+#define hexColorAlpha(colorV,a) [UIColor colorWithHex:colorV alpha:a]
 
 /** 随机色 */
 #define RamdomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0f green:arc4random_uniform(256)/255.0f blue:arc4random_uniform(256)/255.0f alpha:1.0f]
