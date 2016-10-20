@@ -46,6 +46,11 @@ Pod::Spec.new do |s|
         ss.source_files = 'NBCategory/NBCategories/NSDictionary/*.{h,m}'
         ss.public_header_files = 'NBCategory/NBCategories/NSDictionary/*.h'
     end
+    s.subspec 'NSObject' do |ss|
+        ss.source_files = 'NBCategory/NBCategories/NSObject/*.{h,m}'
+        ss.public_header_files = 'NBCategory/NBCategories/NSObject/*.h'
+    end
+
     s.subspec 'NSString' do |ss|
         ss.source_files = 'NBCategory/NBCategories/NSString/*.{h,m}'
         ss.public_header_files = 'NBCategory/NBCategories/NSString/*.h'
