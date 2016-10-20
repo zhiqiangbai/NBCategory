@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     #
 
     s.name         = "NBCategory"
-    s.version      = "0.1.0"
+    s.version      = "0.2.0"
     s.summary      = "提供项目需要的一些分类设置代码"
 
     #s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
     s.author             = { "NapoleonBai" => "napoleonbaiandroid@gmail.com" }
 
-    s.source       = { :git => "https://github.com/NapoleonBaiAndroid/NBCategory.git", :tag => "0.1.0", :submodules => true }
+    s.source       = { :git => "https://github.com/NapoleonBaiAndroid/NBCategory.git", :tag => "0.2.0", :submodules => true }
 
 
 
@@ -41,6 +41,10 @@ Pod::Spec.new do |s|
     s.subspec 'NSDate' do |ss|
         ss.source_files = 'NBCategory/NBCategories/NSDate/*.{h,m}'
         ss.public_header_files = 'NBCategory/NBCategories/NSDate/*.h'
+    end
+    s.subspec 'NSDictionary' do |ss|
+        ss.source_files = 'NBCategory/NBCategories/NSDictionary/*.{h,m}'
+        ss.public_header_files = 'NBCategory/NBCategories/NSDictionary/*.h'
     end
     s.subspec 'NSString' do |ss|
         ss.source_files = 'NBCategory/NBCategories/NSString/*.{h,m}'

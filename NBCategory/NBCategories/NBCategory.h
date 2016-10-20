@@ -19,6 +19,14 @@
 #import "UIImage+NBCut.h"
 #import "NSString+NBExtend.h"
 #import "NSString+Password.h"
+#import "NSDictionary+NBDictionary.h"
+#import "NSObject+NBMethodSwizzled.h"
+#import "NSObject+NBNull.h"
+#import "UIImage+ImageCompress.h"
+#import "UIButton+UIButtonExt.h"
+#import "UILabel+NBLabel.h"
+#import "UINavigationBar+NBExtend.h"
+
 
 #endif 
 /* NBCategory_h */
