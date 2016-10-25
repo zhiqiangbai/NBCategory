@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 //ios系统版本
-#define IOS_10_X [[[UIDevice currentDevice] systemVersion] floatValue] >=10.0f
-#define IOS_9_X ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 10.0f)
-#define IOS_8_X ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0f)
-#define IOS_7_X ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0f)
+#define current_device_version [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define IOS_10_LATER  current_device_version >=10.0f
+#define IOS_9_X current_device_version >= 9.0f && current_device_version < 10.0f
+#define IOS_9_LATER current_device_version >= 9.0f
+#define IOS_8_X current_device_version >= 8.0f && current_device_version < 9.0f
+#define iOS_8_LATER current_device_version>= 8.0f
+#define IOS_7_X current_device_version >= 7.0f && current_device_version < 8.0f
+#define IOS_7_LATER current_device_version >= 7.0f
+
 
 #define IPHONE_3_5 ([UIScreen mainScreen].bounds.size.height==480.0f)
 
