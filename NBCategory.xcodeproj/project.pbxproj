@@ -357,6 +357,7 @@
 				TargetAttributes = {
 					44E667E21DB316DD00E9222C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VE48QCP5YY;
 						ProvisioningStyle = Automatic;
 					};
 					44E667FB1DB316DE00E9222C = {
@@ -589,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VE48QCP5YY;
 				INFOPLIST_FILE = NBCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiqiangbai.NBCategory;
@@ -600,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VE48QCP5YY;
 				INFOPLIST_FILE = NBCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiqiangbai.NBCategory;
