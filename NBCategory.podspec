@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     #
 
     s.name         = "NBCategory"
-    s.version      = "0.2.2"
+    s.version      = "0.2.3"
     s.summary      = "提供项目需要的一些分类设置代码"
 
     #s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
     s.author             = { "NapoleonBai" => "napoleonbaiandroid@gmail.com" }
 
-    s.source       = { :git => "https://github.com/NapoleonBaiAndroid/NBCategory.git", :tag => "0.2.2", :submodules => true }
+    s.source       = { :git => "https://github.com/NapoleonBaiAndroid/NBCategory.git", :tag => "0.2.3", :submodules => true }
 
 
 

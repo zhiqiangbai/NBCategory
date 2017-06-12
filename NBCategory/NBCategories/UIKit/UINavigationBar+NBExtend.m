@@ -7,32 +7,13 @@
 //
 
 #import "UINavigationBar+NBExtend.h"
-#import "objc/runtime.h"
+#import "UIImage+NBColor.h"
 
 @implementation UINavigationBar (NBExtend)
 
-static char overlayKey;
-
-- (UIView *)overlay {
-    
-    return objc_getAssociatedObject(self, &overlayKey);
-}
-
-- (void)setOverlay:(UIView *)overlay {
-    
-    objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-}
 
 - (void)nb_setBackgroundColor:(UIColor *)backgroundColor {
-    if (!self.overlay) {
-        [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        self.overlay = [[UIView alloc] initWithFrame:CGRectMake(-1, -20, [UIScreen mainScreen].bounds.size.width+1, CGRectGetHeight(self.bounds) + 20)];
-        self.overlay.userInteractionEnabled = NO;
-        self.overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        [self insertSubview:self.overlay atIndex:0];
-    }
-    self.overlay.backgroundColor = backgroundColor;
+    [self setBackgroundImage:[UIImage imageFromContextWithColor:backgroundColor size:CGSizeMake(self.bounds.size.width, self.bounds.size.height)] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)nb_setTranslationY:(CGFloat)translationY {
@@ -57,8 +38,9 @@ static char overlayKey;
 - (void)nb_reset
 {
     [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    [self.overlay removeFromSuperview];
-    self.overlay = nil;
+    
 }
 
 @end
+
+
