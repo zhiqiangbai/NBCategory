@@ -7,13 +7,25 @@
 //
 
 #import "UINavigationBar+NBExtend.h"
-#import "UIImage+NBColor.h"
 
 @implementation UINavigationBar (NBExtend)
 
 
 - (void)nb_setBackgroundColor:(UIColor *)backgroundColor {
-    [self setBackgroundImage:[UIImage imageFromContextWithColor:backgroundColor size:CGSizeMake(self.bounds.size.width, self.bounds.size.height)] forBarMetrics:UIBarMetricsDefault];
+    [self setBackgroundImage:[self imageWithColor:backgroundColor size:CGSizeMake(self.bounds.size.width, self.bounds.size.height)] forBarMetrics:UIBarMetricsDefault];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
 
 - (void)nb_setTranslationY:(CGFloat)translationY {
