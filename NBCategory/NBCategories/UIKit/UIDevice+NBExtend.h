@@ -11,7 +11,9 @@
 //ios系统版本
 #define current_device_version [[[UIDevice currentDevice] systemVersion] floatValue]
 
-#define IOS_10_LATER  current_device_version >=10.0f
+#define IOS_11_LATER  current_device_version >= 11.0f
+#define IOS_10_X current_device_version >= 10.0f && current_device_version < 11.0f
+#define IOS_10_LATER  current_device_version >= 10.0f
 #define IOS_9_X current_device_version >= 9.0f && current_device_version < 10.0f
 #define IOS_9_LATER current_device_version >= 9.0f
 #define IOS_8_X current_device_version >= 8.0f && current_device_version < 9.0f
