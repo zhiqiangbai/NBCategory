@@ -12,7 +12,9 @@
 
 
 - (void)nb_setBackgroundColor:(UIColor *)backgroundColor {
-    [self setBackgroundImage:[self imageWithColor:backgroundColor size:CGSizeMake(self.bounds.size.width, self.bounds.size.height)] forBarMetrics:UIBarMetricsDefault];
+    CGFloat width = self.bounds.size.width ;
+    CGFloat height = 64.0f;
+    [self setBackgroundImage:[self imageWithColor:backgroundColor size:CGSizeMake(width, height)] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
