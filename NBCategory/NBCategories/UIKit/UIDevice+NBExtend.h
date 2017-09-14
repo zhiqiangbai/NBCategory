@@ -21,14 +21,16 @@
 #define IOS_7_X current_device_version >= 7.0f && current_device_version < 8.0f
 #define IOS_7_LATER current_device_version >= 7.0f
 
-
+// iPhone 4 / 4s
 #define IPHONE_3_5 ([UIScreen mainScreen].bounds.size.height==480.0f)
-
+// iPhone 5 / 5s
 #define IPHONE_4_0 ([UIScreen mainScreen].bounds.size.height==568.0f)
-
+// iPhone 6/7/8
 #define IPHONE_4_7 ([UIScreen mainScreen].bounds.size.height==667.0f)
-
+// iPhone * plus
 #define IPHONE_5_5 ([UIScreen mainScreen].bounds.size.height==736.0f || [UIScreen mainScreen].bounds.size.height==414.0f)
+//2436px × 1125px (812pt × 375pt @3x) iPhone X
+#define IPHONE_5_8 ([UIScreen mainScreen].bounds.size.height==812.0f || [UIScreen mainScreen].bounds.size.height==375.0f)
 
 @interface UIDevice (NBExtend)
 

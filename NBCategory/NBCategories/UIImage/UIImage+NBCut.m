@@ -13,8 +13,6 @@
 /**
  *  图片剪切为圆形
  *
- *  @param originalImage 原始图片
- *
  *  @return 剪切后的圆形图片
  */
 -(UIImage *)roundImage{
